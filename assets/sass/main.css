@@ -1931,7 +1931,7 @@ footer p span {
         height: 300px;
     }
     .modal-body {
-        background-image: url("../images/svg/rsvp-modal-ph.svg");
+        background-image: url("../images/svg/rsvp-modal-ph.png");
         background-size: contain;
     }
     .modal-rsvp-content {

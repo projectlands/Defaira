@@ -64,15 +64,15 @@
                                 <ul class="menu">
                                     <li><a href="#home">Home</a></li>
                                     <li><a href="#couple">Couple</a></li>
-                                    <li><a href="#our-story">Our Story</a></li>
+                                    <li><a href="#">Dana</a></li>
                                     <li class="mb-none">
                                         <a class="logo" href="#home">
                                             <img src="assets/images/svg/logo.svg" alt="logo">
                                         </a>
                                     </li>
+                                    <li><a href="#">Ayu</a></li>
                                     <li><a href="#gallery">Gallery</a></li>
                                     <li><a href="#RSVP">RSVP</a></li>
-                                    <li><a href="404.html">Pages</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -516,11 +516,16 @@
                         <h2 class="rsvp-title">Will You Attend?</h2>
                         <div class="form">
                             <form>
-                                <div class="group"><input type="text"><label>Name</label></div>
-                                <div class="group"><input type="text"><label>Email</label></div>
-                                <div class="group"><input type="text"><label>Number Of Guests</label></div>
-                                <div class="group"><input type="text"><label>What Will You Be Attending</label></div>
-                                <div class="group"><input type="text"><label>Meal Preferences</label></div>
+                                <div class="group"><input type="text" id="name" name="Nama" required><label>Isikan Nama</label></div>
+                                <div class="group"><input type="text"><label>Ucapan & Doa</label></div>
+                                <div class="group">
+                                    <!-- <label>Meal Preferences</label> -->
+                                    <select name="Kehadiran" id="kehadiran" required>
+											<option value="Hadir">Hadir</option>
+											<option value="Ragu - Ragu">Ragu - Ragu</option>
+											<option value="Tidak Hadir">Tidak Hadir</option>
+									</select>
+                                </div>
                                 <div class="submit-box"><input type="submit" value="Submit"></div>
                             </form>
                         </div>
