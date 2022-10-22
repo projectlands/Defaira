@@ -113,7 +113,8 @@ form.addEventListener('submit', e => {
 var xMusik = document.getElementById("myAudio");
 var play = document.getElementById("play");
 var stop = document.getElementById("stop");
-window.onload=function(){
+
+function loadAuido(){
   xMusik.play();
 }
 
