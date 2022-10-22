@@ -403,62 +403,22 @@
             <div class="row text-center">
                 <div class="col-lg-12">
                     <div class="our-partners-title">
-                        <h2 class="main-title wow bounceIn">Our Partners</h2>
+                        <h2 class="main-title wow bounceIn">Ucapan & doa untuk mempelai</h2>
                         <img class="content-logo" src="./assets/images/svg/content-logo.png" alt="content-logo">
                     </div>
                 </div>
             </div>
-            <div class="row partners">
-                <div class="col-lg-4">
-                    <div class="gift">
-                        <div class="gifts-img" style="background-image: url(assets/images/gifts-img/gift01.png)"></div>
+            <div class="row partners" style="border: 1px solid rgb(143, 140, 140);border-radius: 5px; overflow-y: scroll; height: 320px; border: 0px;">
+
+                <div class="bwrapper-default bubbleWrapper">
+            </div>
+                
+                <!-- <div class="col-lg-4"><div class="gift"><div class="gifts-img">  
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="gift">
-                        <div class="gifts-img" style="background-image: url(assets/images/gifts-img/gift02.png)"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="gift">
-                        <div class="gifts-img" style="background-image: url(assets/images/gifts-img/gift03.png)"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="gift">
-                        <div class="gifts-img" style="background-image: url(assets/images/gifts-img/gift04.png)"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="gift">
-                        <div class="gifts-img" style="background-image: url(assets/images/gifts-img/gift05.png)"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="gift">
-                        <div class="gifts-img" style="background-image: url(assets/images/gifts-img/gift06.png)"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="gift">
-                        <div class="gifts-img" style="background-image: url(assets/images/gifts-img/gift07.png)"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="gift">
-                        <div class="gifts-img" style="background-image: url(assets/images/gifts-img/gift08.png)"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="gift">
-                        <div class="gifts-img" style="background-image: url(assets/images/gifts-img/gift09.png)"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="gift">
-                        <div class="gifts-img" style="background-image: url(assets/images/gifts-img/gift10.png)"></div>
-                    </div>
-                </div>
+                </div> -->
+                
+                
             </div>
         </div>
     </section>
@@ -515,9 +475,9 @@
                     <div class="modal-rsvp-content">
                         <h2 class="rsvp-title">Will You Attend?</h2>
                         <div class="form">
-                            <form>
+                            <form name="submit-to-google-sheet">
                                 <div class="group"><input type="text" id="name" name="Nama" required><label>Isikan Nama</label></div>
-                                <div class="group"><input type="text"><label>Ucapan & Doa</label></div>
+                                <div class="group"><input type="text" id="ucapan" name="Ucapan" required><label>Ucapan & Doa</label></div>
                                 <div class="group">
                                     <!-- <label>Meal Preferences</label> -->
                                     <select name="Kehadiran" id="kehadiran" required>
@@ -526,8 +486,22 @@
 											<option value="Tidak Hadir">Tidak Hadir</option>
 									</select>
                                 </div>
-                                <div class="submit-box"><input type="submit" value="Submit"></div>
+
+                                <div class="submit-box btn-kirim"><input type="submit" value="Submit"></div>
                             </form>
+                            <button class="btn-loading btn btn-default btn-block disabled d-none">
+										<div class="lds-ellipsis" style="margin-top: -20px;">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+										</div>
+									</button>
+									<!-- </div> -->
+									<div class="my-alert alert alert-success d-none alert-dismissable">
+										<span class="close" data-dismiss="alert">&times;</span>
+										<strong>Ucapan & Doa</strong> Sudah Terikirm, Terimakasih
+									</div>
                         </div>
                     </div>
                 </div>
@@ -548,6 +522,7 @@
     <script src="assets/js/wow.js"></script>
     <script src="assets/js/jquery.fancybox.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
         new WOW().init();
     </script>
