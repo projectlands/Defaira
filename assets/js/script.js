@@ -31,49 +31,49 @@ $.ajax(setting).done(function (datas) {
   }
   const totalData = '<span id="cdefault" class="counter js-counter" data-from="0" data-speed="5000" data-to= "' + totalKonfirm + '" data-refresh-interval="10">1</span>'
 
-  $('.total-vote').append(totalData)
+  // $('.total-vote').append(totalData)
   $('.bwrapper-default').append(data_guest)
-  $('.chart').load('chart.html')
+  // $('.chart').load('chart.html')
 
-  const datachart = {
-    labels: ['Hadir', 'Ragu', 'Tidak Hadir'],
-    datasets: [{
-      label: 'Voting',
-      data: [hadir, ragu, tHadir],
-      backgroundColor: [
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(255, 26, 104, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-        'rgba(0, 0, 0, 0.2)'
-      ]
-    }]
-  };
+  // const datachart = {
+  //   labels: ['Hadir', 'Ragu', 'Tidak Hadir'],
+  //   datasets: [{
+  //     label: 'Voting',
+  //     data: [hadir, ragu, tHadir],
+  //     backgroundColor: [
+  //       'rgba(54, 162, 235, 0.2)',
+  //       'rgba(255, 206, 86, 0.2)',
+  //       'rgba(255, 26, 104, 0.2)',
+  //       'rgba(75, 192, 192, 0.2)',
+  //       'rgba(153, 102, 255, 0.2)',
+  //       'rgba(255, 159, 64, 0.2)',
+  //       'rgba(0, 0, 0, 0.2)'
+  //     ]
+  //   }]
+  // };
 
   // config 
-  const config = {
-    type: 'bar',
-    data: datachart,
-    options: {
-      indexAxis: 'y',
-      scales: {
-        y: {
-          grid: {
-            display: false
-          },
-          beginAtZero: true
-        }
-      }
-    }
-  };
+  // const config = {
+  //   type: 'bar',
+  //   data: datachart,
+  //   options: {
+  //     indexAxis: 'y',
+  //     scales: {
+  //       y: {
+  //         grid: {
+  //           display: false
+  //         },
+  //         beginAtZero: true
+  //       }
+  //     }
+  //   }
+  // };
 
   // render init block
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
+  // const myChart = new Chart(
+  //   document.getElementById('myChart'),
+  //   config
+  // );
 
 })
 
@@ -113,6 +113,9 @@ form.addEventListener('submit', e => {
 var xMusik = document.getElementById("myAudio");
 var play = document.getElementById("play");
 var stop = document.getElementById("stop");
+window.onload=function(){
+  xMusik.play();
+}
 
 function playAudio() {
   play.style.display = "none";
