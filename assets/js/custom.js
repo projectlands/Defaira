@@ -164,6 +164,37 @@ $(document).ready(function() {
 
 
 });
+
+// musi player
+$(document).ready(function() {
+    var musiplayer = $(".musiplayer");
+
+    $(window).scroll(function() {
+        var topPos = $(this).scrollTop();
+        if (topPos > 100) {
+            $(musiplayer).css("opacity", "1");
+
+        } else {
+            $(musiplayer).css("opacity", "0");
+        }
+        if ($(window).scrollTop() >= 900) {
+            $('header').addClass('fixed-header');
+            $('header div').addClass('visible-title');
+        } else {
+            $('header').removeClass('fixed-header');
+            $('header div').removeClass('visible-title');
+        }
+
+    });
+    $(musiplayer).click(function() {
+        $('html, body').animate({
+            musiplayer: 0
+        }, 800);
+        return false;
+    });
+
+
+});
 $('[data-fancybox="preview"]').fancybox({
     thumbs: {
         autoStart: true

@@ -1333,7 +1333,43 @@ footer p span {
 
 /* End */
 
+/* musik wraper */
+    .musik-wraper {
+        display: none;
+    }
+/* end */
 
+/* musik player */
+
+.musiplayer {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0;
+    height: 70px;
+    width: 70px;
+    z-index: 2;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid #C4A676;
+    transition: all 0.4s ease-in-out 0s;
+    border-radius: 40px;
+    display: block;
+}
+
+.musiplayer img {
+    width: 50px;
+}
+.musiplayer button {
+    animation: bounceanimation 2s infinite;
+    position: absolute;
+    padding: 15px 0px 0px 8px;
+    background: transparent;
+    border: none;
+    border-radius: 99px;
+}
+
+/* end */
 /* Slick slider */
 
 .slick-arrow.slick-prev {
