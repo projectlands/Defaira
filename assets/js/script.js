@@ -135,6 +135,7 @@ function playAudio() {
   stop.style.display = "block";
   stop.style.color = "red";
   xMusik.play();
+  $('#staticBackdrop').modal('hide');
 }
 
 function pauseAudio() {
@@ -146,12 +147,17 @@ function pauseAudio() {
 }
 
 // $(document).ready(function() {
-//   $(window).on('load',function(){$('#myAudio').play();});
+//   $(window).on('load',function(){
+//     $('#staticBackdrop').Modal('show');});
 // });
 
-$(document).ready(function() {
-    $("#myAudio").get(0).play();
-});
+// $(document).ready(function() {
+//     $("#myAudio").get(0).play();
+// });
+
+$(window).on('load',function(){
+        $('#staticBackdrop').modal('show');
+    });
 
 
 
