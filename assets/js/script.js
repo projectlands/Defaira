@@ -1,3 +1,6 @@
+$(document).ready(function(){
+        $("#modalbukaundangan").modal('show');
+    });
 // const spreadshetID = "1N953wTDqsIZpkrwvCsFZxcMcihv2MalB5pTn3SzonL4"
 const url = "https://script.google.com/macros/s/AKfycbxZLKkOAio18qbU9V9-Du3AT5ELmfv0xBjsFCUjDMfTULOjhoo0MUM28FMTtwrLeMSy/exec"
 const setting = {
@@ -100,9 +103,19 @@ form.addEventListener('submit', e => {
       btnLoading.classList.toggle('d-none')
       btnKirim.classList.toggle('d-none')
       form.reset()
-      location.reload();
+      // location.reload();
+      $(".cvote").remove();
+      $(".modal-backdrop").remove();
+      $('.modal').hide();     
       
-
+      $.ajax(setting).done(function (datas) {
+            const data = datas.GoogleSheetData
+            var data_guest = ''
+            for (var i = data.length - 1; i >= 1; i--) {
+              data_guest += '<div class="inlineContainer cvote"></div><span class="other cvote">' + data[i][1] + ' | <strong>' + data[i][3] + '</strong></span><img class="inlineIcon cvote" src="https://pngimage.net/wp-content/uploads/2018/05/cuore-emoji-png-4.png"><div class="otherBubble other cvote">' + data[i][2] + '</div>'
+            }
+            $('.bwrapper-default').append(data_guest);
+          })
     })
     .catch(error => console.error('Error!', error.message))
 })
@@ -117,9 +130,11 @@ tamu.innerHTML = params['hi']
 if (params['sesi'] == 1) {
   waktu.innerHTML = '30 Oktober 2022 | 12.00 - Selesai'
   waktu2.innerHTML = '30 Oktober 2022 | 12.00 - Selesai'
+  document.querySelector('.maps').src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.33435657532!2d114.66539039999999!3d-8.3687329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd3d9d715a0a16d%3A0x2d87ef039f209c1e!2sShri%20Arya%20Belog%20Mendoyo%20(Puri%20Gede%20Kaba%20kaba)!5e0!3m2!1sid!2sid!4v1666522637303!5m2!1sid!2sid"
 }else{
   waktu.innerHTML = '04 November 2022 | 10.00 - Selesai'
   waktu2.innerHTML = '04 November 2022 | 10.00 - Selesai'
+  document.querySelector('.maps').src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.8400320632536!2d115.0868263147801!3d-8.117764994156067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee58e8ba2e02bfd7!2zOMKwMDcnMDQuMCJTIDExNcKwMDUnMjAuNSJF!5e0!3m2!1sid!2sid!4v1666523145267!5m2!1sid!2sid"
 }
 // console.log(params['sesi'])
 // end waktu dan sesi
@@ -159,15 +174,3 @@ $(window).on('load',function(){
         $('#staticBackdrop').modal('show');
     });
 
-
-
-// let text = "";
-// const gallery = ["DSC_1591-min.jpg", "DSC_1598-min.jpg", "depan-mobile-min.jpg", "DSC_1511-min.jpg", "1-slide.jpg", "maried-min.jpg", "DSC_1543-min.jpg", "DSC_1550-min.jpg", "DSC_1639-min.jpg", "DSC_1690-min.jpg", "slide2-min.jpg", "vote2bg-min.jpg", "slide-min.jpg", "votebg-min.jpg", "slide4-min.jpg", "b-min.jpg", "DSC_1789-min.jpg", "sukac-min.jpg", "min-min.jpg"];
-// gallery.forEach(arrayGallery);
-
-// document.getElementById("fh5co-gallery-list").innerHTML = text;
-
-// function arrayGallery(item) {
-//   text += '<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery/' + item + '); background-repeat:no-repeat; " data-responsive="images/gallery/' + item + '" data-src="images/gallery/' + item + '" data-sub-html=""> <a href="images/gallery/' + item + '"></a></li>';
-// }
-// lightGallery(document.getElementById('fh5co-gallery-list'))

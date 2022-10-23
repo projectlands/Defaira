@@ -16,12 +16,6 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
 
-    <script>
-    $(document).ready(function(){
-        $("#modalbukaundangan").modal('show');
-    });
-    </script>
-
 </head>
 
 <body>
@@ -409,10 +403,9 @@
                     <div class="col-lg-6 pr-0">
                         <div class="rsvp-img wow bounceInLeft" data-toggle="modal" data-target="#modalrsvp" style="background-image: url(assets/images/svg/rsvp.png)"></div>
                     </div>
-                    <div class="col-lg-6 pl-0">
-                        <div class="rsvp-map wow bounceInRight"><iframe src="https://maps.google.com/maps?hl=en&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed">
-                        </iframe>
-                            <a href="https://www.maps.ie/coordinates.html"></a>
+                    <div class="col-lg-6 pl-0 ">
+                        <div class="rsvp-map wow bounceInRight ">
+                            <iframe src="" class="maps"></iframe>
                         </div>
                     </div>
                 </div>
@@ -519,6 +512,7 @@
                                 </div>
 
                                 <div class="submit-box btn-kirim"><input type="submit" value="Submit"></div>
+                                <div class="submit-box d-none btn-loading"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loding...</div>
                             </form>
                             <button class="btn-loading btn btn-default btn-block disabled d-none">
 										<div class="lds-ellipsis" style="margin-top: -20px;">

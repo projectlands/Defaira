@@ -93,7 +93,7 @@ new WOW().init();
 
 const urlSearchParams2 = new URLSearchParams(window.location.search);
 const params2 = Object.fromEntries(urlSearchParams2.entries());
-console.log(params2['sesi'])
+// console.log(params2['sesi'])
 const second = 1000,
     minute = second * 60,
     hour = minute * 60,
