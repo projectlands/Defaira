@@ -91,12 +91,15 @@ $(document).ready(function() {
 });
 new WOW().init();
 
+const urlSearchParams2 = new URLSearchParams(window.location.search);
+const params2 = Object.fromEntries(urlSearchParams2.entries());
+console.log(params2['sesi'])
 const second = 1000,
     minute = second * 60,
     hour = minute * 60,
     day = hour * 24;
 
-let countDown = new Date('May 29, 2020 00:00:00').getTime(),
+let countDown = new Date(params2['sesi'] == 1 ? 'Oct 30, 2022 12:00:00' : 'Nov 04, 2022 10:00:00').getTime(),
     x = setInterval(function() {
 
         let now = new Date().getTime(),
@@ -168,7 +171,6 @@ $(document).ready(function() {
 // musi player
 $(document).ready(function() {
     var musiplayer = $(".musiplayer");
-    $("#myAudio").get(0).play();
 
     $(window).scroll(function() {
         var topPos = $(this).scrollTop();

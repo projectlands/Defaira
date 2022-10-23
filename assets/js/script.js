@@ -107,6 +107,22 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message))
 })
 
+// waktu dan sesi
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+const tamu = document.querySelector('.tamu')
+const waktu = document.querySelector('.waktu')
+const waktu2 = document.querySelector('.waktu2')
+tamu.innerHTML = params['hi']
+if (params['sesi'] == 1) {
+  waktu.innerHTML = '30 Oktober 2022 | 12.00 - Selesai'
+  waktu2.innerHTML = '30 Oktober 2022 | 12.00 - Selesai'
+}else{
+  waktu.innerHTML = '04 November 2022 | 10.00 - Selesai'
+  waktu2.innerHTML = '04 November 2022 | 10.00 - Selesai'
+}
+// console.log(params['sesi'])
+// end waktu dan sesi
 
 // mp3 player
 
@@ -138,10 +154,7 @@ $(document).ready(function() {
 });
 
 
-const urlSearchParams = new URLSearchParams(window.location.search);
-const params = Object.fromEntries(urlSearchParams.entries());
-const tamu = document.querySelector('.tamu')
-tamu.innerHTML = params['hi']
+
 // let text = "";
 // const gallery = ["DSC_1591-min.jpg", "DSC_1598-min.jpg", "depan-mobile-min.jpg", "DSC_1511-min.jpg", "1-slide.jpg", "maried-min.jpg", "DSC_1543-min.jpg", "DSC_1550-min.jpg", "DSC_1639-min.jpg", "DSC_1690-min.jpg", "slide2-min.jpg", "vote2bg-min.jpg", "slide-min.jpg", "votebg-min.jpg", "slide4-min.jpg", "b-min.jpg", "DSC_1789-min.jpg", "sukac-min.jpg", "min-min.jpg"];
 // gallery.forEach(arrayGallery);
