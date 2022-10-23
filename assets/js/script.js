@@ -172,5 +172,9 @@ function pauseAudio() {
 
 $(window).on('load',function(){
         $('#staticBackdrop').modal('show');
+        
     });
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
 
