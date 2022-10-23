@@ -16,9 +16,15 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
 
+    <script>
+    $(document).ready(function(){
+        $("#modalbukaundangan").modal('show');
+    });
+    </script>
+
 </head>
 
-<body onload="loadAuido()">
+<body>
     <!-- ===== Main Banner ===== -->
     <section class="main-banner" style="background-image: url(assets/images/couple/main-banner1.jpg)" id="home">
         <div class="container-fluid">
@@ -51,7 +57,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="main-navigation">
-                        <a class="rsvp-icon" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">
+                        <a class="rsvp-icon" href="#" data-toggle="modal" data-target="#modalrsvp">
                             <img src="assets/images/svg/rsvp-icon.svg" alt="logo"></a>
                         <a class="mob-logo" href="#home"><img src="assets/images/svg/logo.svg" alt="logo"></a>
                         <div class="menu-toggle" onclick="myFunction(this)">
@@ -383,7 +389,7 @@
             <div class="rsvp">
                 <div class="row">
                     <div class="col-lg-6 pr-0">
-                        <div class="rsvp-img wow bounceInLeft" data-toggle="modal" data-target=".bd-example-modal-lg" style="background-image: url(assets/images/svg/rsvp.png)"></div>
+                        <div class="rsvp-img wow bounceInLeft" data-toggle="modal" data-target="#modalrsvp" style="background-image: url(assets/images/svg/rsvp.png)"></div>
                     </div>
                     <div class="col-lg-6 pl-0">
                         <div class="rsvp-map wow bounceInRight"><iframe src="https://maps.google.com/maps?hl=en&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed">
@@ -472,7 +478,7 @@
     <!-- ===== footer end ===== -->
 
     <!-- ===== Model design ===== -->
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg" id="modalrsvp" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="rsvp-close" aria-hidden="true"></span></button></div>

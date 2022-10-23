@@ -200,4 +200,6 @@ $('[data-fancybox="preview"]').fancybox({
         autoStart: true
     }
 });
+
+
 //# sourceMappingURL=custom.js.map

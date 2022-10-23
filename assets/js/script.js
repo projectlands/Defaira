@@ -114,10 +114,6 @@ var xMusik = document.getElementById("myAudio");
 var play = document.getElementById("play");
 var stop = document.getElementById("stop");
 
-function loadAuido(){
-  xMusik.play();
-}
-
 function playAudio() {
   play.style.display = "none";
   stop.style.display = "block";
@@ -132,6 +128,14 @@ function pauseAudio() {
   xMusik.pause();
   xMusik.currentTime = 0;
 }
+
+// $(document).ready(function() {
+//   $(window).on('load',function(){$('#myAudio').play();});
+// });
+
+$(document).ready(function() {
+    $("#myAudio").get(0).play();
+});
 
 // let text = "";
 // const gallery = ["DSC_1591-min.jpg", "DSC_1598-min.jpg", "depan-mobile-min.jpg", "DSC_1511-min.jpg", "1-slide.jpg", "maried-min.jpg", "DSC_1543-min.jpg", "DSC_1550-min.jpg", "DSC_1639-min.jpg", "DSC_1690-min.jpg", "slide2-min.jpg", "vote2bg-min.jpg", "slide-min.jpg", "votebg-min.jpg", "slide4-min.jpg", "b-min.jpg", "DSC_1789-min.jpg", "sukac-min.jpg", "min-min.jpg"];
