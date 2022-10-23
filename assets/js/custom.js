@@ -168,6 +168,7 @@ $(document).ready(function() {
 // musi player
 $(document).ready(function() {
     var musiplayer = $(".musiplayer");
+    $("#myAudio").get(0).play();
 
     $(window).scroll(function() {
         var topPos = $(this).scrollTop();
