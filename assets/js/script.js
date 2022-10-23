@@ -170,10 +170,14 @@ function pauseAudio() {
 //     $("#myAudio").get(0).play();
 // });
 
-$(window).on('load',function(){
-        $('#staticBackdrop').modal('show');
+// $(window).on('load',function(){
+//         $('#staticBackdrop').modal('show');
         
-    });
+//     });
+
+window.onload = function () {
+        $('#staticBackdrop').modal('show');
+    };
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
