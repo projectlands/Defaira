@@ -128,13 +128,13 @@ const waktu = document.querySelector('.waktu')
 const waktu2 = document.querySelector('.waktu2')
 tamu.innerHTML = params['hi']
 if (params['sesi'] == 1) {
-  waktu.innerHTML = '30 Oktober 2022 | 12.00 - Selesai'
-  waktu2.innerHTML = '30 Oktober 2022 | 12.00 - Selesai'
-  document.querySelector('.maps').src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.33435657532!2d114.66539039999999!3d-8.3687329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd3d9d715a0a16d%3A0x2d87ef039f209c1e!2sShri%20Arya%20Belog%20Mendoyo%20(Puri%20Gede%20Kaba%20kaba)!5e0!3m2!1sid!2sid!4v1666522637303!5m2!1sid!2sid"
+  waktu.innerHTML = '31 Maret 2023 | 12.00 - 18.00 WITA'
+  waktu2.innerHTML = '31 Maret 2023 | 12.00 - 18.00 WITA'
+  document.querySelector('.maps').src = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3949.954869416963!2d115.11408911411212!3d-8.106077983335693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDYnMjEuOSJTIDExNcKwMDYnNTguNiJF!5e0!3m2!1sen!2sid!4v1680090086450!5m2!1sen!2sid"
 }else{
-  waktu.innerHTML = '04 November 2022 | 10.00 - Selesai'
-  waktu2.innerHTML = '04 November 2022 | 10.00 - Selesai'
-  document.querySelector('.maps').src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.8400320632536!2d115.0868263147801!3d-8.117764994156067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee58e8ba2e02bfd7!2zOMKwMDcnMDQuMCJTIDExNcKwMDUnMjAuNSJF!5e0!3m2!1sid!2sid!4v1666523145267!5m2!1sid!2sid"
+  waktu.innerHTML = '31 Maret 2023 | 12.00 - 18.00 WITA'
+  waktu2.innerHTML = '31 Maret 2023 | 12.00 - 18.00 WITA'
+  document.querySelector('.maps').src = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3949.954869416963!2d115.11408911411212!3d-8.106077983335693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDYnMjEuOSJTIDExNcKwMDYnNTguNiJF!5e0!3m2!1sen!2sid!4v1680090086450!5m2!1sen!2sid"
 }
 // console.log(params['sesi'])
 // end waktu dan sesi

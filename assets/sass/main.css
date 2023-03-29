@@ -925,7 +925,7 @@ nav.main-navigation {
     left: 51%;
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    background-image: url("../images/svg/rsvp-logo.png");
+    /* background-image: url("../images/svg/rsvp-logo.png"); */
     background-size: cover;
     height: 140px;
     width: 105px;

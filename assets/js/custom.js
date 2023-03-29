@@ -99,7 +99,7 @@ const second = 1000,
     hour = minute * 60,
     day = hour * 24;
 
-let countDown = new Date(params2['sesi'] == 1 ? 'Oct 30, 2022 12:00:00' : 'Nov 04, 2022 10:00:00').getTime(),
+let countDown = new Date(params2['sesi'] == 1 ? 'Mar 31, 2023 12:00:00' : 'Mar 31, 2023 12:00:00').getTime(),
     x = setInterval(function() {
 
         let now = new Date().getTime(),
